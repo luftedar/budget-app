@@ -10,7 +10,7 @@ RSpec.describe Expense, type: :model do
   end
   before { subject.save }
 
-  it 'Validates Provided User' do
+  it 'Validates Provided Subject' do
     expect(subject).to be_valid
   end
 
