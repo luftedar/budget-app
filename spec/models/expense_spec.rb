@@ -6,7 +6,8 @@ RSpec.describe Expense, type: :model do
     @test_group = @test_user.groups.new(name: 'testgroup',
                                         icon: 'https://media.istockphoto.com/vectors/flat-icon-check-vector-id496603666?k=20&m=496603666&s=170667a&w=0&h=QOfI-aqzv1dEamb2evpWUvKkukJwtH4YRF_Ugwksk6Y=',
                                         user_id: @test_user.id)
-    @test_expense = @test_user.expenses.new(name: 'testgroup', amount: 100.0, user_id: @test_user.id, group: @test_group)
+    @test_expense = @test_user.expenses.new(name: 'testgroup', amount: 100.0, user_id: @test_user.id,
+                                            group: @test_group)
   end
   before { subject.save }
 

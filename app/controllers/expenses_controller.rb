@@ -11,19 +11,21 @@ class ExpensesController < ApplicationController
 
   def create
     @group = Group.find(expense_params[:group_id])
-    @expense = @group.expense.create(name: expense_params[:name], amount: expense_params[:amount], user_id: current_user.id, group_id: @group.id)
+    @expense = @group.expense.create(name: expense_params[:name], amount: expense_params[:amount],
+                                     user_id: current_user.id, group_id: @group.id)
 
     if @expense.save
       flash[:success] = 'Expense Created Successfuly'
       redirect_to groups_path
     else
       flash[:error] = 'Failed to Create Expense'
+      render 'new'
     end
   end
 
   private
 
-  def expense_params 
+  def expense_params
     params.require(:expense).permit(:name, :amount)
   end
 end
