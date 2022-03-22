@@ -1,8 +1,9 @@
 <div class="navbar">
-  <a href="#" class="previous round">&#8249;</a>
   <% if current_page?('/users/sign_in') %>
-    Log in
+    <h1 class="navbar-header">Log in</h1>
   <% elsif current_page?('/users/sign_up') %>
-    Sign up
+    <h1 class="navbar-header">Sign up</h1>
+  <% else %>
+    <a href="#" class="previous round">&#8249;</a>
   <% end %>
 </div>

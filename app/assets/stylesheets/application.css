@@ -14,8 +14,16 @@
  *= require_self
  */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
   background-color: blue;
+  height: 50px;
+  text-align: center;
+  color: white;
 }
 
 .previous {
@@ -23,4 +31,35 @@
   font-size: 40px;
   text-decoration: none;
   font-weight: 800;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.login-form form > * {
+  margin: 15px;
+}
+
+.action-button {
+  background-color: green;
+  width: 150px;
+  border-radius: 15px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.input-field {
+  border: none;
+  box-shadow: 2px 2px 5px 1px black inset;
+  padding: 10px 20px;
+  font-size: 17px;
+  margin-top: 13px;
+  border-radius: 15px;
 }
