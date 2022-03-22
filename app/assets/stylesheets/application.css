@@ -24,6 +24,9 @@
   height: 50px;
   text-align: center;
   color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .previous {
@@ -62,4 +65,26 @@
   font-size: 17px;
   margin-top: 13px;
   border-radius: 15px;
+}
+
+.sign-out {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.db-input {
+  width: 100%;
+  background-color: green;
+  text-align: center;
+  padding: 10px;
+  margin: 2px 1px;
+}
+
+.db-input-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
 }

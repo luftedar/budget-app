@@ -1,6 +1,22 @@
-<% if user_signed_in? %>
-  <%= link_to "Sign Out", destroy_user_session_path, method: :delete%>
-<% end %>
+<%= render 'devise/shared/header' %>
 
-<h1>Groups#index</h1>
-<p>Find me in app/views/groups/index.html.erb</p>
+<div class="db-input">
+  <%= link_to "Add New Category", new_group_path, class: "db-input-link" %>
+</div>
+
+<div class="cat-list">
+  <ul>
+    <% @groups.each do |group| %>
+      <li class="cat-list-item">
+        <div> 
+          <%= image_tage "#{group.icon}"%>
+        </div>
+        <h3> <%= group.name %> </h3>
+        <div>
+          <p> <%= group.total_expenses %> </p>
+          <p> <%= group.created_at %> </p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
