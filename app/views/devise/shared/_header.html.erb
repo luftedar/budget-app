@@ -1,4 +1,8 @@
 <div class="navbar">
-  <i class="fa-solid fa-arrow-left"></i>
+  <a href="#" class="previous round">&#8249;</a>
+  <% if current_page?('/users/sign_in') %>
+    Log in
+  <% elsif current_page?('/users/sign_up') %>
+    Sign up
+  <% end %>
 </div>
-  <i class="fa-solid fa-circle-arrow-left"></i>
