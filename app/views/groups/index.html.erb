@@ -9,11 +9,11 @@
     <% @groups.each do |group| %>
       <li class="cat-list-item">
         <div> 
-          <%= image_tage "#{group.icon}"%>
+          <%= image_tag "#{group.icon}"%>
         </div>
         <h3> <%= group.name %> </h3>
         <div>
-          <p> <%= group.total_expenses %> </p>
+          <%# <p> <%= group.total_expenses %> </p> %>
           <p> <%= group.created_at %> </p>
         </div>
       </li>

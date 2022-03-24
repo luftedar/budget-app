@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @group = Groups.find(params[:id])
+    @group = Group.find(params[:id])
   end
 
   def new
@@ -26,7 +26,7 @@ class GroupsController < ApplicationController
 
   private
 
-  def groups_params
+  def group_params
     params.require(:group).permit(:name, :icon)
   end
 end
