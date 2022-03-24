@@ -1,2 +1,11 @@
-<h1>Expenses#index</h1>
-<p>Find me in app/views/expenses/index.html.erb</p>
+<%= render 'devise/shared/header' %>
+
+<div class="total-expense">
+  <div class="db-input">
+    <%= link_to "Add New Expense", new_group_expense_path(@group), class: "db-input-link" %>
+  </div>
+  <div class="total-expense-header">
+    <h1> <%= @group.name %> </h1>
+    <h2> Total Spent: <%= @group.total_expenses %> </h2>
+  </div>
+</div>

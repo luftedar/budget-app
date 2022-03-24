@@ -1,2 +1,20 @@
-<h1>Expenses#new</h1>
-<p>Find me in app/views/expenses/new.html.erb</p>
+<%= render 'devise/shared/header' %>
+
+<div class="login-form">
+  <%= form_with model: @expense, url: group_expenses_path, method: :post, local: true  do |form| %>
+      <div class="field">
+        <%= form.label :name, "Name" %> <br>
+        <%= form.text_field :name, placeholder: "Expense category", required: true, class: "input-field" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :amount, "Amount" %> <br>
+        <%= form.number_field :amount, placeholder: "Amount", required: true, class: "input-field" %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Save", class: "action-button" %>
+      </div>
+
+  <% end %>
+</div>
