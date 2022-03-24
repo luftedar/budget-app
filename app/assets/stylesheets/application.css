@@ -48,6 +48,10 @@
   margin: 15px;
 }
 
+.field {
+  text-align: start;
+}
+
 .action-button {
   background-color: green;
   width: 150px;

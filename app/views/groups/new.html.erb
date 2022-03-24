@@ -1,17 +1,19 @@
 <%= render 'devise/shared/header' %>
 
-<%= form_with model: @group, method: :post, local: true do |form| %>
-    <div class="mb-3 p-2">
-      <%= form.label :name, "Name", :class => "form-label" %>
-      <%= form.text_field :name, placeholder: "Category Name", required: true, :class => "form-control" %>
-    </div>
+<div class="login-form">
+  <%= form_with model: @group, method: :post, local: true do |form| %>
+      <div class="field">
+        <%= form.label :name, "Name" %><br>
+        <%= form.text_field :name, placeholder: "Category Name", required: true, class: "input-field" %>
+      </div>
 
-    <div class="mb-3 p-2">
-      <%= form.label :icon, "Icon", :class => "form-label" %>
-      <%= form.url_field :icon, placeholder: "Icon link", required: true, :class => "form-control" %>
-    </div>
+      <div class="field">
+        <%= form.label :icon, "Icon" %><br>
+        <%= form.url_field :icon, placeholder: "Icon link", required: true, class: "input-field" %>
+      </div>
 
-    <div class="p-2 text-center">
-      <%= form.submit "Save", class: "btn btn-primary", disable_with: "Please wait..." %>
-    </div>
-<% end %>
+      <div class="actions">
+        <%= form.submit "Save", class: "action-button" %>
+      </div>
+  <% end %>
+</div>
