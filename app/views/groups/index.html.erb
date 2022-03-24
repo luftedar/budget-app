@@ -8,13 +8,15 @@
   <ul>
     <% @groups.each do |group| %>
       <li class="cat-list-item">
-        <div> 
-          <%= image_tag "#{group.icon}"%>
+        <div class="cat-list-image"> 
+          <%= image_tag "#{group.icon}", class: "cat-list-logo" %>
         </div>
-        <h3> <%= group.name %> </h3>
-        <div>
-          <%# <p> <%= group.total_expenses %> </p> %>
-          <p> <%= group.created_at %> </p>
+
+        <div class="cat-list-desc">
+          <%= link_to group_expenses_path(group.id), class: "cat-list-link" do %>
+            <h3> <%= group.name %> </h3>
+          <% end %>
+          <p> Date Created: <%= group.created_at %> </p>
         </div>
       </li>
     <% end %>
