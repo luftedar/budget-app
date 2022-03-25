@@ -14,13 +14,13 @@
  *= require_self
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mochiy+Pop+One&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Permanent+Marker&family=Roboto+Slab:wght@300;400;500;600;900&family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mochiy+Pop+One&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:wght@300&family=Permanent+Marker&family=Roboto+Slab:wght@300;400;500;600;900&family=Source+Code+Pro:wght@400;500;600;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .navbar {
@@ -68,7 +68,7 @@
 
 .input-field {
   border: none;
-  box-shadow: 2px 2px 5px 1px black inset;
+  box-shadow: 0.7px 0.7px 1px 0.5px rgb(99, 150, 209) inset;
   padding: 10px 20px;
   font-size: 17px;
   margin-top: 13px;
@@ -98,7 +98,7 @@
 }
 
 .cat-list-item {
-  border: 1px solid #000;
+  border: 1px solid rgba(99, 150, 209, 0.274);
   border-radius: 18px;
   margin: 10px 50px;
   list-style: none;
@@ -106,6 +106,7 @@
   flex-direction: row;
   padding: 40px;
   height: 150px;
+  box-shadow: 0.7px 0.7px 1px 0.5px rgb(99, 150, 209) inset;
 }
 
 .cat-list-image {
@@ -145,6 +146,14 @@
   align-items: center;
   justify-content: space-around;
   height: 100vh;
+  background-color: rgba(219, 219, 219, 0.404);
+}
+
+.intro-header {
+  font-style: italic;
+  background: -webkit-linear-gradient(rgb(131, 131, 131), rgb(82, 20, 20));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .intro-buttons {
@@ -174,4 +183,33 @@
 
 .signup {
   background-color: rgb(99, 150, 209);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p{
+  color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+}
+
+.home-thing {
+  color: white;
+}
+
+.total-expense-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
