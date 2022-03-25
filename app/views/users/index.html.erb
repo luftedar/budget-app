@@ -1,4 +1,13 @@
-<h1>Deneme</h1>
-<% if user_signed_in? %>
-  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-<% end %>
+<div class ="intro-page">
+  <div class="intro-header">  
+    <h1>budgeTracker</h1>
+  </div>
+  <div class="intro-buttons">
+    <div class="intro-container">
+      <%= link_to "Log in", new_user_session_path, class: "intro login" %>
+    </div>
+    <div class="intro-container">
+      <%= link_to "Sign up", new_user_registration_path, class: "intro signup" %>
+    </div>
+  </div>
+</div>

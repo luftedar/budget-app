@@ -19,6 +19,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
 
@@ -136,4 +137,41 @@
 .cat-list-link {
   text-decoration: none;
   margin: 20px;
+}
+
+.intro-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.intro-buttons {
+  width: 100%;
+  align-self: flex-end;
+}
+
+.intro-container {
+  width: 100%;
+  text-align: center;
+}
+
+.intro {
+  display: block;
+  border: 1px solid #000;
+  width: 100%;
+  border-radius: 15px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.login {
+  background-color: green;
+}
+
+.signup {
+  background-color: blue;
 }
