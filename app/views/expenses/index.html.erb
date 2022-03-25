@@ -1,11 +1,28 @@
 <%= render 'devise/shared/header' %>
 
 <div class="total-expense">
-  <div class="db-input">
-    <%= link_to "Add New Expense", new_group_expense_path(@group), class: "db-input-link" %>
+  <div class="total-expense-description">
+    <div class="db-input">
+      <%= link_to "Add New Expense", new_group_expense_path(@group), class: "db-input-link" %>
+    </div>
+    <div class="total-expense-header">
+      <h1> <%= @group.name %> </h1>
+      <h2> Total Spent: <%= @group.total_expenses %> </h2>
+    </div>
   </div>
-  <div class="total-expense-header">
-    <h1> <%= @group.name %> </h1>
-    <h2> Total Spent: <%= @group.total_expenses %> </h2>
+  <div class="cat-list">
+    <ul>
+      <% @expense.each do |expense| %>
+        <li class="cat-list-item">
+          <div class="cat-list-image">
+            <h3> <%= expense.name %> </h3>
+          </div>
+          <div class="cat-list-desc">
+            <p> Amount: <%= expense.amount %> </p>
+            <p> Date Created: <%= expense.created_at %> </p>
+          </div>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>
