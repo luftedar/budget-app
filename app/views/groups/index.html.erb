@@ -16,6 +16,7 @@
           <%= link_to group_expenses_path(group.id), class: "cat-list-link" do %>
             <h3> <%= group.name %> </h3>
           <% end %>
+          <p> Amount: <%= group.total_expenses %> </p>
           <p> Date Created: <%= group.created_at %> </p>
         </div>
       </li>
