@@ -2,8 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'groups/new.html.erb', type: :view do
   before(:each) do
-    @user = User.create!(name: 'testuser', email: 'test@testmail.com', password: 'testpassword', password_confirmation: 'testpassword')
-    @group = @user.groups.create!(name: 'testgroup', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/2048px-Video-Game-Controller-Icon-IDV-green.svg.png', user_id: @user.id)
+    @user = User.create!(name: 'testuser', email: 'test@testmail.com', password: 'testpassword',
+                         password_confirmation: 'testpassword')
+    @group = @user.groups.create!(name: 'testgroup',
+                                  icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/2048px-Video-Game-Controller-Icon-IDV-green.svg.png', user_id: @user.id)
     visit user_session_path
     fill_in 'Email', with: 'test@testmail.com'
     fill_in 'Password', with: 'testpassword'
