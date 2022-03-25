@@ -12,11 +12,11 @@ RSpec.describe 'expenses/index.html.erb', type: :view do
     visit group_expenses_path(@group.id)
   end
 
-  it 'display expenses on page' do
+  it 'Render Total Spent' do
     expect(page).to have_content('Total Spent:')
   end
 
-  it 'display Add new transaction button on page' do
+  it 'Render Add New Expense Button' do
     expect(page).to have_link 'Add New Expense'
   end
 end
