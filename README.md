@@ -11,6 +11,15 @@
 - Cancancan
 - Devise
 
+## Live Demo
+
+[Heroku](https://thawing-crag-46611.herokuapp.com/)
+
+## Video
+
+[Loom Video](https://www.loom.com/share/cf50c4768f7940ceb8468c57cb80db66?focus_title=1&muted=1&from_recorder=1)
+
+
 ## Getting Started
 
 

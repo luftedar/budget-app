@@ -152,6 +152,8 @@
   background: -webkit-linear-gradient(rgb(131, 131, 131), rgb(82, 20, 20));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: 100%;
+  text-align: center;
 }
 
 .intro-buttons {
