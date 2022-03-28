@@ -4,6 +4,8 @@
 
 > Budget App Project. That Built by using Ruby on Rails. You can track your expenses with this app.
 
+![screenshot](./app_screenshot.png)
+
 ## Built With
 
 - Ruby on Rails
